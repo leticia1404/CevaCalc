@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Ceva Calc</string>
+    <string name="app_name">CevaCalc</string>
+    <string name="beer_a">Beer 1</string>
+    <string name="beer_b">Beer B</string>
+    <string name="price_per_liter_a">Price per liter of Beer 1: $</string>
+    <string name="price_per_liter_b">Price per liter of Beer 2: $</string>
+    <string name="comparsion">Comparsion</string>
+    <string name="exit">Exit</string>
+    <string name="back">Back</string>
+    <string name="the_cheapest_bear">"The cheapest beer: "</string>
+    <string name="beer_1_price">Beer 1 Price</string>
+    <string name="beer_2_price">Beer 2 Price</string>
+    <string name="beer_1_volume">Beer 1 Volume</string>
+    <string name="beer_2_volume">Beer 2 Volume</string>
+    <string name="calculate">Calculate</string>
 </resources>

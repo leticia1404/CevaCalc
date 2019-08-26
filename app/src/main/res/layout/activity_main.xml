@@ -6,21 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edtPrecoCerveja1"
+    <Button
+        android:id="@+id/button"
         android:layout_width="395dp"
         android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Cerveja 1 Preço"
-        android:inputType="numberDecimal"
-        android:text=""
+        android:text="@string/calculate"
+        android:contentDescription="@string/calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edtVolumeCerveja2" />
 
     <EditText
         android:id="@+id/edtVolumeCerveja1"
@@ -30,7 +28,8 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Cerveja 1 Volume"
+        android:hint="@string/beer_1_volume"
+        android:contentDescription="@string/beer_1_volume"
         android:inputType="numberDecimal"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +42,11 @@
         android:layout_width="395dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Cerveja 2 Preço"
+        android:hint="@string/beer_2_price"
+        android:contentDescription="@string/beer_2_price"
         android:inputType="numberDecimal"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,24 +58,34 @@
         android:id="@+id/edtVolumeCerveja2"
         android:layout_width="395dp"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Cerveja 2 Volume"
+        android:hint="@string/beer_2_volume"
+        android:contentDescription="@string/beer_2_volume"
         android:inputType="numberDecimal"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPrecoCerveja2" />
 
-    <Button
-        android:id="@+id/button"
+    <EditText
+        android:id="@+id/edtPrecoCerveja1"
         android:layout_width="395dp"
         android:layout_height="0dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
-        android:text="Calcular"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/beer_1_price"
+        android:contentDescription="@string/beer_1_price"
+        android:inputType="numberDecimal"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtVolumeCerveja2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

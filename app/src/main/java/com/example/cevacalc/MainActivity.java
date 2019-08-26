@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public boolean isEmpty(int id_elemento) {
+        return ((EditText) findViewById(id_elemento)).getText().length() == 0;
+    }
+
     public void calcular() {
         float precoA;
         float precoB;
@@ -33,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         float precoPorLitroA;
         float precoPorLitroB;
         String maisBarata;
+
+        if (isEmpty(R.id.edtPrecoCerveja1) ||
+                isEmpty(R.id.edtPrecoCerveja2) ||
+                isEmpty(R.id.edtVolumeCerveja1) ||
+                isEmpty(R.id.edtVolumeCerveja2)) {
+            return;
+        }
 
         precoA = Float.valueOf(((EditText) findViewById(R.id.edtPrecoCerveja1)).getText().toString());
         precoB = Float.valueOf(((EditText) findViewById(R.id.edtPrecoCerveja2)).getText().toString());
@@ -43,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
         precoPorLitroB = precoB / volumeB;
 
         if (precoPorLitroA > precoPorLitroB) {
-            maisBarata = "Cerveja A";
+            maisBarata = getResources().getString(R.string.beer_a);
         } else {
-            maisBarata = "Cerveja B";
+            maisBarata = getResources().getString(R.string.beer_b);
         }
 
         // Create the object of
@@ -55,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
                 .Builder(MainActivity.this);
 
         // Set the message show for the Alert time
-        builder.setMessage("Preço por litro da cerveja A: R$" + precoPorLitroA + "\n" +
-                "Preço por litro da cerveja B: R$" + precoPorLitroB + "\n" +
-                "Cerveja mais barata: " + maisBarata);
+        builder.setMessage(getResources().getString(R.string.price_per_liter_a) + String.format("%.2f", precoPorLitroA) + "\n" +
+                getResources().getString(R.string.price_per_liter_b) + String.format("%.2f", precoPorLitroB) + "\n" +
+                getResources().getString(R.string.the_cheapest_bear) + maisBarata);
 
         // Set Alert Title
-        builder.setTitle("Comparação");
+        builder.setTitle(getResources().getString(R.string.comparsion));
 
         // Set Cancelable false
         // for when the user clicks on the outside
@@ -73,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         builder
                 .setPositiveButton(
-                        "Sair",
+                        getResources().getString(R.string.exit),
                         new DialogInterface
                                 .OnClickListener() {
 
@@ -92,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         // of DialogInterface interface.
         builder
                 .setNegativeButton(
-                        "Voltar",
+                        getResources().getString(R.string.back),
                         new DialogInterface
                                 .OnClickListener() {
 

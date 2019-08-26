@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CevaCalc</string>
+    <string name="price_per_liter_a">Preço por litro da cerveja 1: R$</string>
+    <string name="price_per_liter_b">Preço por litro da cerveja 2: R$</string>
+    <string name="beer_a">Cerveja 1</string>
+    <string name="beer_b">Cerveja 2</string>
+    <string name="comparsion">Comparação</string>
+    <string name="exit">Sair</string>
+    <string name="back">Voltar</string>
+    <string name="the_cheapest_bear">"Cerveja mais barata: "</string>
+    <string name="beer_1_price">Cerveja 1 Preço</string>
+    <string name="beer_2_price">Cerveja 2 Preço</string>
+    <string name="beer_1_volume">Cerveja 1 Volume</string>
+    <string name="beer_2_volume">Cerveja 2 Volume</string>
+    <string name="calculate">Calcular</string>
+</resources>
